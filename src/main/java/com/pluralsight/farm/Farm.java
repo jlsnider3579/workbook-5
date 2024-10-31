@@ -31,8 +31,18 @@ public class Farm {
     }
 
     public void printWholeSong(){
-        for (Animal a: animals){
-            printOneVerse(a.getName(), a.getSound());
+        for (int i = 0; i < animals.size() ; i++) {
+            Animal presentAnimal = animals.get(i);
+
+            printOneVerse(presentAnimal.getName(), presentAnimal.getSound());
+
+            for (int j = 0; j <= i; j++) {
+                Animal prevAnimal = animals.get(j);
+
+                printOneVerse(presentAnimal.getName(),presentAnimal.getSound());
+
+
+        }
         }
     }
 
